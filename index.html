@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editor de Código ao Vivo</title>
+    <title>Live Code Editor</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,20 +54,20 @@
     </style>
 </head>
 <body>
-    <h1>Editor de Código ao Vivo</h1>
+    <h1>Live Code Editor</h1>
     <div class="tabs">
         <div class="tab active" onclick="openEditor('html')">HTML</div>
         <div class="tab" onclick="openEditor('css')">CSS</div>
         <div class="tab" onclick="openEditor('js')">JS</div>
     </div>
-    <textarea id="htmlEditor" class="editor active" placeholder="Digite seu código HTML aqui..."></textarea>
-    <textarea id="cssEditor" class="editor" placeholder="Digite seu código CSS aqui..."></textarea>
-    <textarea id="jsEditor" class="editor" placeholder="Digite seu código JavaScript aqui..."></textarea>
-    <input type="number" id="fileNumber" placeholder="Número do arquivo" min="1">
-    <button onclick="updateIframe()">Criar</button>
-    <button onclick="saveCode()">Salvar Código</button>
+    <textarea id="htmlEditor" class="editor active" placeholder="Type your HTML code here..."></textarea>
+    <textarea id="cssEditor" class="editor" placeholder="Type your CSS code here..."></textarea>
+    <textarea id="jsEditor" class="editor" placeholder="Type your JavaScript code here..."></textarea>
+    <input type="number" id="fileNumber" placeholder="File number" min="1">
+    <button onclick="updateIframe()">Create</button>
+    <button onclick="saveCode()">Save Code</button>
     <input type="file" id="fileInput" style="display: none;" accept=".phh" onchange="loadFile(event)">
-    <button onclick="document.getElementById('fileInput').click()">Carregar Código</button>
+    <button onclick="document.getElementById('fileInput').click()">Load Code</button>
     <iframe id="output"></iframe>
 
     <script src="script.js"></script>
